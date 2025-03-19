@@ -8,9 +8,9 @@ import { useEffect, useState } from 'react';
 function App() {
   
   const medicalTeam=[
-    {"id":1,"names":"Skylar Calzoni","photo":"Images/React.png","title":"nurse","address":"Manchester"},
-    {"id":2,"names":"Alfredo Gouse","photo":"Images/JS.png","title":"nurse","address":"Wartford"},
-    {"id":3,"names":"James Carder","photo":"Images/TS.png","title":"nurse","address":"Milton Keynes"},
+    {"id":1,"names":"Skylar Calzoni","photo":"Images/React.png","title":"nurse","address":"Manchester","comments":3,"messages":1},
+    {"id":2,"names":"Alfredo Gouse","photo":"Images/JS.png","title":"nurse","address":"Wartford","comments":1,"messages":0},
+    {"id":3,"names":"James Carder","photo":"Images/TS.png","title":"nurse","address":"Milton Keynes","comments":0,"messages":2},
   ];
 
     const [teamCount,setTeamCount]=useState(0);
@@ -42,8 +42,8 @@ function App() {
                         </div>
                     </div>
                     <div className="d-flex">
-                        <button type="button" class="p-2 btn  btn-sm">C</button>
-                        <button type="button" class="p-2 btn  btn-sm">Y</button>
+                        <button type="button" class="p-2 btn  btn-sm">{member.comments}</button>
+                        <button type="button" class="p-2 btn  btn-sm">{member.messages}</button>
                         <div className="flex-grow-1"></div>
                         <button type="button" class="p-2 btn  btn-sm">...</button>
 
